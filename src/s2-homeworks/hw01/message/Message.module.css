@@ -1,13 +1,13 @@
 .message {
     width: 575px;
-    height: 77px;
+    min-height: 77px;
     margin: 24px 0 0 635px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: flex-end;
-    border: 1px solid blue;
+/*    border: 1px solid blue;*/
 }
 
 .imageAndText {
@@ -29,11 +29,11 @@
 }
 
 .text {
- /*   border: 10px solid green;*/
+/*    border: 10px solid green*/;
     font-style: normal;
     color: #ffffff;
     width: 527px;
-    height: 60px;
+    min-height: 60px;
     left: 635px;
     top: 192px;
 
