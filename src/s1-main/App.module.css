@@ -1,0 +1,24 @@
+.App {
+   --header_height: 60px;
+   width: 1280px;
+    height: 720px;
+
+    background: #FFFFFF;
+    border: 1px solid red;
+}
+
+.hw {
+    border: 5px solid yellow;
+
+}
+.hwTitle {
+
+   font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    /* identical to box height */
+    color: #000000;
+    margin: 131px 0 10px 70px;
+    border: 1px solid yellow;
+}
