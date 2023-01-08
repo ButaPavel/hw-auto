@@ -43,16 +43,18 @@
 
     text-align: right;
     border-radius: 10px;
-
+    clip-path: polygon(
+            0% 0%,
+            calc(100% - 10px) 0%,
+            calc(100% - 10px) calc(100% - 10px),
+            100% 100%,
+            0% 100%,
+            0% 0%);
     }
 
-.text:after {
- /*   border-top: none;
-    height: .9em;
-    border-radius: 0 0 50% 50% / 0 0 100% 100%;
-    background: silver;
-    border-color: silver;
-    margin-left: -.9em;*/
+.text::after {
+    content: "";
+
 }
 
 
