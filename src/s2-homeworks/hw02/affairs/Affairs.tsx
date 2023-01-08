@@ -4,24 +4,28 @@ import {AffairType, FilterType} from '../HW2'
 import s from './Affairs.module.css'
 
 type AffairsPropsType = {
-    data: any // need to fix any
-    setFilter: any
-    deleteAffairCallback: any
+    data: Array<AffairType> // need to fix any
+    setFilter: (filter: FilterType) => void
+    deleteAffairCallback: (_id: number) => void
     filter: FilterType
 }
 
 function Affairs(props: AffairsPropsType) {
-    const setAll = () => {
+    const setAll = () => {                  //вызывается при нажатии на All
         // need to fix
+        props.setFilter('all')
     }
-    const setHigh = () => {
+    const setHigh = () => {                 //вызывается при нажатии на High
         // need to fix
+        props.setFilter('high')
     }
-    const setMiddle = () => {
+    const setMiddle = () => {                 //вызывается при нажатии на Middle
         // need to fix
+        props.setFilter('middle')
     }
-    const setLow = () => {
+    const setLow = () => {                 //вызывается при нажатии на Low
         // need to fix
+        props.setFilter('low')
     }
 
     const cnAll = s.button + ' ' + s.all + (props.filter === 'all' ? ' ' + s.active : '')
@@ -29,7 +33,7 @@ function Affairs(props: AffairsPropsType) {
     const cnMiddle = s.button + ' ' + s.middle + (props.filter === 'middle' ? ' ' + s.active : '')
     const cnLow = s.button + ' ' + s.low + (props.filter === 'low' ? ' ' + s.active : '')
 
-    const mappedAffairs = props.data.map((a: AffairType) => (
+    const mappedAffairs = props.data.map((a: AffairType) => (             //отрисовка дел (filteredAffairs)
         <Affair
             key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
             affair={a}
