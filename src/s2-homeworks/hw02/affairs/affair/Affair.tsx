@@ -23,10 +23,10 @@ function Affair(props: AffairPropsType) {
             id={'hw2-affair-' + props.affair._id}
             className={affairClass}
         >
-            <div id={'hw2-name-' + props.affair._id} className={nameClass}>  {/*отрисовка наименования дела*/}
+            <div id={'hw2-name-' + props.affair._id} className={nameClass}>
                 {props.affair.name}
             </div>
-            <div id={'hw2-priority-' + props.affair._id} hidden>  {/*данный блок скрыт (hidden)*/}
+            <div id={'hw2-priority-' + props.affair._id} hidden>
                 {props.affair.priority}
             </div>
 
